@@ -1,0 +1,277 @@
+.carts {
+  padding: 40px 0;
+
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 25%;
+    grid-gap: 25px;
+  }
+
+  &-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2.62rem;
+    font-weight: 700;
+    letter-spacing: .4px;
+    margin-bottom: 20px;
+  }
+
+  &-form {
+    background-color: #f8f8f8;
+    padding: 15px;
+
+    >span {
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+
+  &-product {
+    display: flex;
+    justify-content: space-between;
+    background-color: $white;
+    padding: 15px;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
+    img {
+      width: 80px;
+    }
+
+    .carts-name {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      @include transition;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    .carts-price p {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $orangered;
+    }
+  }
+
+  &-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    i {
+      font-size: 2.2rem;
+
+      &:hover {
+        cursor: pointer;
+        color: $primary;
+      }
+    }
+
+    div {
+      @include flex-align;
+      gap: 10px;
+    }
+  }
+
+  &-pricee {
+    display: block;
+    margin: 8px 0;
+  }
+
+  &-boxProduct {
+    @include flex-align;
+    gap: 15px;
+
+    div>span {
+      display: block;
+    }
+
+    &-contentProduct {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &-flex {
+    display: flex;
+
+    div {
+      &:first-child {
+        padding-right: 25px;
+      }
+
+      textarea {
+        text-indent: 10px;
+        padding-top: 10px;
+        border: $border;
+      }
+    }
+
+    div span {
+      display: block;
+      font-weight: 700;
+      padding: 10px 0;
+    }
+  }
+
+  &-items {
+    @include flex-align;
+    gap: 10px;
+
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &-pay {
+    position: relative;
+  }
+
+  &-continue {
+    position: absolute;
+    top: -25px;
+    right: 0;
+    @include transition;
+
+    i {
+      position: relative;
+      top: 1.8px;
+    }
+
+    &:hover {
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+
+  &-box {
+    border: $border;
+    padding: 20px;
+  }
+
+  &-title {
+    font-weight: 700;
+    padding-bottom: 10px;
+  }
+
+  &-subtotal {
+    @include flex-spaceBetween;
+    padding: 15px 0;
+    border-top: $borderBottom;
+    border-bottom: $borderBottom;
+
+    span {
+      font-weight: 600;
+    }
+
+    p {
+      font-weight: 600;
+      color: $orangered;
+    }
+  }
+
+  &-code {
+    margin: 8px 0;
+    font-size: 1.35rem;
+    color: $textLight;
+  }
+
+  button {
+    @extend .btn;
+    font-size: 1.42rem;
+    font-weight: 500;
+    width: 100%;
+    padding: 10px 0;
+
+    &:last-child {
+      margin-top: 20px;
+    }
+
+    &::before {
+      @extend .BtnBefore;
+    }
+
+    &:hover::before {
+      @extend .hoverBtnBefore;
+    }
+  }
+
+  &-text {
+    font-size: 2.62rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  &-productP {
+    padding-bottom: 50px;
+
+    @include sm {
+      padding-bottom: 25px;
+    }
+  }
+
+  @include xl {
+    &-container {
+      grid-gap: 20px;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: 100%;
+    }
+
+    .carts-name {
+      font-size: 1.42rem;
+    }
+
+    &-pay {
+      margin-top: 25px;
+    }
+
+    &-flex {
+      flex-direction: column;
+
+      div textarea {
+        width: 100%;
+      }
+    }
+
+    .carts-flex div:first-child {
+      padding-right: 0;
+    }
+  }
+
+  @include sm {
+    &-product {
+      position: relative;
+      flex-direction: column;
+    }
+
+    &-price {
+      display: unset;
+      padding-left: 92px;
+
+      div span {
+        display: inline-block;
+        margin-top: 1.8px;
+      }
+
+      i {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+
+        @media (max-width: 400px) {
+          display: none;
+        }
+      }
+    }
+  }
+}

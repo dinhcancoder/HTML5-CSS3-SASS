@@ -1,0 +1,36 @@
+.category {
+  padding-top: 50px;
+
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+  }
+
+  &-box {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      @include transitionTime(2s);
+    }
+
+    &:hover img {
+      @include tranform(scale(1.1));
+    }
+
+    &:hover span,
+    &:hover i {
+      color: $primary;
+    }
+  }
+
+  @include md {
+    &-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

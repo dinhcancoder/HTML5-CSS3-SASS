@@ -1,0 +1,115 @@
+.contacts {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &-map iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  &-content {
+    padding: 50px;
+  }
+
+  &-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  &-info {
+    color: #666;
+
+    li {
+      margin-bottom: 25px;
+    }
+
+    strong {
+      color: $black;
+    }
+  }
+
+  &-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+  }
+
+  &-form {
+    input {
+      font-size: 1.42rem;
+      font-family: $font;
+      border: $border;
+      background-color: #fbfbfb;
+      @include borderRadius(2px);
+      text-indent: 15px;
+      padding: 12px 0;
+      margin: 15px 0;
+
+      &:focus {
+        border-color: $primary;
+        background-color: $white;
+      }
+    }
+
+    input:first-child {
+      width: 100%;
+    }
+
+    input:nth-child(2) {
+      width: 48%;
+      float: left;
+    }
+
+    input:nth-child(3) {
+      width: 48%;
+      float: right;
+    }
+
+    input:nth-child(4) {
+      width: 100%;
+    }
+  }
+
+  &-capcha {
+    font-size: 1.3rem;
+    color: $textLight;
+
+    a {
+      color: rgb(34, 112, 237);
+    }
+  }
+
+  button {
+    @extend .btn;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 15px 40px;
+    margin-top: 20px;
+
+    &::before {
+      @extend .BtnBefore;
+    }
+
+    &:hover::before {
+      @extend .hoverBtnBefore;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: 1fr;
+    }
+
+    &-content {
+      padding: 15px;
+    }
+
+    &-map {
+      height: 320px;
+    }
+  }
+}

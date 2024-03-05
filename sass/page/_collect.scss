@@ -1,0 +1,221 @@
+.collect {
+  &-container {
+    display: grid;
+    grid-template-columns: 22% 1fr;
+    grid-gap: 20px;
+    padding: 50px 0;
+  }
+
+  // &-left {
+  //   position: fixed;
+  //   width: 100%;
+  //   top: 0;
+  //   left: 0;
+  // }
+
+  &-name {
+    font-size: 1.32rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 10px 0;
+  }
+
+  &-box {
+    position: relative;
+    padding-bottom: 10px;
+
+    input {
+      appearance: none;
+      -webkit-appearance: none;
+      width: 15px;
+      height: 15px;
+      border: $border;
+      @include borderRadius(2px);
+      overflow: hidden;
+
+      &:hover {
+        border-color: $black;
+        cursor: pointer;
+      }
+    }
+
+    i {
+      display: none;
+      position: absolute;
+      left: 1.2px;
+      font-size: 1.25rem;
+    }
+
+    input:checked {
+      border-color: $black;
+    }
+
+    input:checked ~ i {
+      display: block;
+    }
+
+    label {
+      @include transition;
+      letter-spacing: 0.2px;
+
+      &:hover {
+        color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-choose {
+    @include flex-align;
+    gap: 7px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+
+  &-colorList {
+    display: grid;
+    max-width: 80%;
+    grid-template-columns: repeat(auto-fit, minmax(25px, 25px));
+    grid-auto-rows: 25px;
+    grid-gap: 10px;
+  }
+
+  &-color {
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:nth-child(1) {
+      background-color: #ef5777;
+    }
+
+    &:nth-child(2) {
+      background-color: #ffd32a;
+    }
+
+    &:nth-child(3) {
+      background-color: #d2dae2;
+    }
+
+    &:nth-child(4) {
+      background-color: #3c40c6;
+    }
+
+    &:nth-child(5) {
+      background-color: #0be881;
+    }
+
+    &:nth-child(6) {
+      background-color: #f53b57;
+    }
+
+    &:nth-child(7) {
+      background-color: #0fbcf9;
+    }
+
+    &:nth-child(8) {
+      background-color: #000000;
+    }
+
+    &:nth-child(9) {
+      background-color: #ff3f34;
+    }
+
+    &:nth-child(10) {
+      background-color: #a55eea;
+    }
+
+    &:nth-child(11) {
+      background-color: #6ab04c;
+    }
+
+    &:nth-child(12) {
+      background-color: #0c2461;
+    }
+
+    &:nth-child(13) {
+      background-color: #fa8231;
+    }
+  }
+
+  &-size {
+    display: flex;
+    gap: 8px;
+
+    span {
+      @include flex-center;
+      font-size: 1.25rem;
+      border: $border;
+      @include borderRadius(50%);
+      text-align: center;
+      width: 35px;
+      height: 35px;
+
+      &:hover {
+        color: $white;
+        background-color: $primary;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-nav {
+    @include flex-spaceBetween;
+    padding-bottom: 25px;
+  }
+
+  &-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  &-list {
+    width: 150px;
+    font-family: $font;
+    background-color: $white;
+    border: none;
+    padding-bottom: 5px;
+    border-bottom: 1px solid $textDark;
+    background-image: none;
+
+    option {
+      font-weight: 200;
+      letter-spacing: 0.4px;
+      background-color: $white;
+    }
+  }
+
+  &-category {
+    li {
+      list-style: square;
+      padding: 5px 0;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+  }
+
+  &-active {
+    color: $orangered;
+    font-weight: 600;
+  }
+
+  &-product {
+    grid-template-columns: repeat(4, 1fr) !important;
+
+    @include md {
+      grid-template-columns: repeat(3, 1fr) !important;
+    }
+
+    @include sm {
+      grid-template-columns: repeat(2, 1fr) !important;
+    }
+  }
+
+  @include xl {
+    &-container {
+      grid-template-columns: 100%;
+    }
+  }
+}

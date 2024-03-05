@@ -1,0 +1,71 @@
+.posts {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding-bottom: 10px;
+  }
+
+  &-box {
+    padding: 0 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-date {
+    display: block;
+    color: $textDark;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+  }
+
+  &-title {
+    position: relative;
+    display: block;
+    color: $black;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 8px;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 50%;
+      @include tranform(translateX(-50%));
+      width: 50px;
+      height: 1.5px;
+      background-color: $primary;
+    }
+  }
+
+  &-text {
+    color: $textDark;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &-box:last-child {
+      display: none;
+    }
+  }
+
+  @include md {
+    &-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

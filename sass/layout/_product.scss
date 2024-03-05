@@ -1,0 +1,123 @@
+.product {
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 25px;
+  }
+
+  &-layout {
+    padding: 2px 0;
+  }
+
+  &-items {
+    border: 1px solid rgba(0, 0, 0, 0.035);
+
+    &:hover {
+      border-color: #64c0dc6d;
+      cursor: pointer;
+    }
+  }
+
+  &-img {
+    overflow: hidden;
+
+    img {
+      @include transitionTime(0.4s);
+    }
+  }
+
+  &-items:hover img {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+  }
+
+  &-box {
+    padding: 20px 0;
+  }
+
+  &-name {
+    @include transition;
+    display: block;
+    text-align: center;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 175px;
+    margin: 0 auto;
+
+    @include lg {
+      max-width: 150px;
+    }
+
+    @include mb {
+      max-width: 125px;
+    }
+  }
+
+  &-items:hover &-name {
+    color: $primary;
+  }
+
+  &-price {
+    @include flex-justify;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+
+    span {
+      &:first-child {
+        color: $textDark;
+      }
+
+      &:last-child {
+        font-size: 1.32rem;
+        color: $textLight;
+        text-decoration-line: line-through;
+        -moz-text-decoration-line: line-through;
+      }
+    }
+  }
+
+  &-rate {
+    @include flex-spaceAround;
+  }
+
+  &-star {
+    font-size: 1.35rem;
+    color: rgba(244, 173, 42, 0.8);
+  }
+
+  &-buy {
+    font-size: 1.28rem;
+    color: $textDark;
+  }
+
+  @include xl {
+    &-container {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 15px;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @include md {
+    &-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include sm {
+    &-rate {
+      display: none;
+    }
+  }
+}

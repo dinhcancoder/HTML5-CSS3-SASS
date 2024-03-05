@@ -1,0 +1,117 @@
+.navbar {
+  position: relative;
+  background-color: $white;
+  border-bottom: $borderBottom;
+
+  &-list {
+    @include flex-justify;
+  }
+
+  &-items {
+    position: relative;
+    height: 100%;
+
+    &:hover {
+      color: $primary;
+    }
+
+    &:hover .submenu {
+      transform: scaleY(1);
+      -webkit-transform: scaleY(1);
+      -moz-transform: scaleY(1);
+      -ms-transform: scaleY(1);
+      -o-transform: scaleY(1);
+    }
+  }
+
+  &-links {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 15px 0;
+    margin: 0 18px;
+    letter-spacing: 1px;
+    @include transition;
+
+    i {
+      position: relative;
+      top: 3px;
+      font-size: 1.8rem;
+      @include transition;
+    }
+  }
+
+  &-items:hover &-links i {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+  }
+
+  @include xl {
+    &-links {
+      font-size: 1.45rem;
+    }
+  }
+
+  @include lg {
+    display: none;
+  }
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  border-top: $borderTop;
+  box-shadow: $boxShadow;
+  transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  -moz-transition: transform 0.3s ease-in-out;
+  -ms-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform-origin: top;
+  z-index: 99;
+  background-color: $white;
+
+  &-items {
+    @include transition;
+    color: $black;
+
+    &:hover {
+      color: $primary;
+      font-size: 1.43rem;
+    }
+  }
+
+  &-items:not(:last-child) {
+    border-bottom: $borderBottom;
+  }
+
+  &-links {
+    display: block;
+    padding: 10px 0;
+    text-indent: 18px;
+  }
+}
+
+.navbar.scrollSticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  padding: 8px 0;
+  box-shadow: $boxShadow;
+
+  @include xl {
+    padding: 6px;
+  }
+}

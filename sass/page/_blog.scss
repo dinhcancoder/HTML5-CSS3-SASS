@@ -1,0 +1,203 @@
+.blog {
+  &-container {
+    display: grid;
+    grid-template-columns: 28% 1fr;
+    padding-top: 30px;
+  }
+
+  &-border {
+    padding: 20px;
+    border: $borderE3;
+
+    &:first-child {
+      margin-bottom: 30px;
+    }
+  }
+
+  &-leftName {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $textDark;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid black;
+
+    i {
+      display: none;
+      position: relative;
+      margin-left: 25px;
+      top: 1.85px;
+      font-size: 2.1rem;
+    }
+  }
+
+  &-leftContent {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 15px 0;
+
+    img {
+      width: 100%;
+      max-width: 82px;
+    }
+
+    a {
+      @include transition;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+
+    p {
+      a {
+        color: $textDark;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &-items {
+    position: relative;
+    color: $textDark;
+    @include transition;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &-links {
+    display: block;
+    letter-spacing: 1px;
+    font-weight: 500;
+    padding: 4px 0;
+
+    i {
+      position: relative;
+      top: 1.6px;
+      left: 2px;
+    }
+  }
+
+  &-submenu {
+    padding-left: 15px;
+    @include tranform(scaleY(0));
+    transform-origin: top;
+    height: 0;
+    transition: transform .3s ease-in-out,
+      height .3s ease-in-out;
+  }
+
+  &-subLinks {
+    display: block;
+    font-size: 1.2rem;
+    color: $text;
+    padding: 4px 0;
+  }
+
+  &-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  &-right {
+    padding-left: 25px;
+  }
+
+  &-rightBox {
+    display: flex;
+    gap: 25px;
+
+    &:not(:first-child) {
+      margin-bottom: 25px;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      a {
+        font-size: 1.6rem;
+        font-weight: 500;
+        color: $black;
+        @include transition;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      span {
+        color: $textLight;
+      }
+
+      p {
+        color: $textDark;
+      }
+    }
+  }
+
+  &-rightImg {
+    max-width: 31%;
+    overflow: hidden;
+
+    img {
+      @include transitionTime(1s);
+
+      &:hover {
+        @include tranform(scale(1.2))
+      }
+    }
+  }
+
+  @include xl {
+    &-container {
+      grid-template-columns: 30% 70%;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: 1fr;
+    }
+
+    &-leftName i {
+      display: inline-block;
+    }
+
+    &-right {
+      padding-left: 0;
+    }
+  }
+
+  @include md {
+    &-rightBox {
+      display: unset;
+    }
+
+    &-rightImg {
+      max-width: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    &-rightBox div a {
+      padding-top: 15px;
+    }
+
+    &-rightBox div p {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.displaySubmenuBlog .blog-submenu {
+  @include tranform(scaleY(1));
+  height: 100%;
+}

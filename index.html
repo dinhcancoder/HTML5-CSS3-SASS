@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Store</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <section class="commit">Đảm bảo 100% sự hài lòng</section>
+    <!-- header -->
+    <header class="header">
+      <div class="container">
+        <div class="header-container">
+          <div class="header-middle">
+            <div class="header-menu">
+              <div class="menu">
+                <a href="#!" class="menu-icons" onclick="menuIcons(this)">
+                  <img src="./assets/image/menu.svg" alt="" />
+                </a>
+              </div>
+              <div class="menu-container">
+                <ul class="menu-list">
+                  <li class="menu-items">
+                    <a href="index.html" class="menu-links">Trang chủ</a>
+                  </li>
+                  <li class="menu-items">
+                    <a
+                      href="collect.html"
+                      class="menu-links"
+                      onclick="menuMobile(this)"
+                      >Bộ sưu tập <i class="bx bx-chevron-right"></i>
+                    </a>
+                    <div class="menu-submenu">
+                      <ul>
+                        <li>
+                          <a href="#!" onclick="menuSubMobile(this)"
+                            ><i class="bx bx-chevron-left"></i>Quay về</a
+                          >
+                        </li>
+                        <li>
+                          <a href="#!">
+                            <p>Xem tất cả "Bộ sưu tập"</p>
+                          </a>
+                        </li>
+                        <li><a href="#!">- Nhẫn</a></li>
+                        <li><a href="#!">- Hoa tai</a></li>
+                        <li><a href="#!">- Dây chuyền</a></li>
+                        <li><a href="#!">- Vòng tay</a></li>
+                        <li><a href="#!">- Phụ kiện</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-items">
+                    <a
+                      href="detail.html"
+                      class="menu-links"
+                      onclick="menuMobile(this)"
+                      >Sản phẩm <i class="bx bx-chevron-right"></i>
+                    </a>
+                    <div class="menu-submenu">
+                      <ul>
+                        <li>
+                          <a href="#!" onclick="menuSubMobile(this)"
+                            ><i class="bx bx-chevron-left"></i>Quay về</a
+                          >
+                        </li>
+                        <li>
+                          <a href=" #!">
+                            <p>Xem tất cả "Bộ sưu tập"</p>
+                          </a>
+                        </li>
+                        <li><a href="#!">- Mua nhiều nhất</a></li>
+                        <li><a href="#!">- Yêu thích nhất</a></li>
+                        <li><a href="#!">- Khuyến mãi HOT</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="menu-items">
+                    <a href="blog.html" class="menu-links">Blog</a>
+                  </li>
+                  <li class="menu-items">
+                    <a href="review.html" class="menu-links">Giới thiệu</a>
+                  </li>
+                  <li class="menu-items">
+                    <a href="contacts.html" class="menu-links">Liên hệ</a>
+                  </li>
+                </ul>
+                <div class="menu-contact">
+                  <p>Liên hệ với chúng tôi qua</p>
+                  <div>
+                    <img src="./assets/image/phone.svg" alt="" />
+                    <span>0373 405 375</span>
+                  </div>
+                  <div>
+                    <img src="./assets/image/email.svg" alt="" />
+                    <span>cancode@fpt.edu.vn</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="header-logo">
+              <a href="index.html">WebsiteMKT</a>
+            </div>
+            <div class="header-icons">
+              <div id="header-icon" class="headerSearch">
+                <a href="#!" id="headerIcons" onclick="overflowY()">
+                  <svg
+                    class="svg-search"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Capa_1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 451 451"
+                    style="enable-background: new 0 0 451 451"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        d="M447.05,428l-109.6-109.6c29.4-33.8,47.2-77.9,47.2-126.1C384.65,86.2,298.35,0,192.35,0C86.25,0,0.05,86.3,0.05,192.3   s86.3,192.3,192.3,192.3c48.2,0,92.3-17.8,126.1-47.2L428.05,447c2.6,2.6,6.1,4,9.5,4s6.9-1.3,9.5-4   C452.25,441.8,452.25,433.2,447.05,428z M26.95,192.3c0-91.2,74.2-165.3,165.3-165.3c91.2,0,165.3,74.2,165.3,165.3   s-74.1,165.4-165.3,165.4C101.15,357.7,26.95,283.5,26.95,192.3z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+                <!-- header box -->
+                <div class="header-box">
+                  <div class="header-search">
+                    <p>Tìm kiếm</p>
+                    <div class="search-box">
+                      <input type="text" placeholder="Tìm kiếm sản phẩm ..." />
+                      <i class="bx bx-search"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="header-icon">
+                <a href="#!" id="headerIcons" onclick="overflowY()">
+                  <svg
+                    class="svg-account"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    version="1.1"
+                    id="Capa_1"
+                    x="0px"
+                    y="0px"
+                    viewBox="0 0 488.9 488.9"
+                    style="enable-background: new 0 0 488.9 488.9"
+                    xml:space="preserve"
+                  >
+                    <g>
+                      <path
+                        d="M477.7,454.8v-26c0-26.5-12.4-52-33.1-68.1c-48.2-37.4-97.3-63.5-114.5-72.2v-29.7c3.5-7.8,6.4-16.3,8.6-25.5   c12.8-4.6,19.8-23.4,24.5-40c6.3-22.1,5.6-37.6-1.8-46.2c7.8-42.5,4.3-73.8-10.3-93.1c-7.7-10.1-16.7-14.4-22.7-16.3   c-4.3-6-13-16.1-27.7-24.2C285.5,4.5,268.4,0,249.6,0c-3.4,0-6.8,0.2-9.8,0.4c-8.4,0.4-16.7,2-24.9,4.7c-0.1,0-0.2,0.1-0.3,0.1   c-9,3.1-17.8,7.6-26.3,13.4c-9.7,6.2-18.6,13.6-26.3,21.8c-15.1,15.5-25.1,33-29.4,51.7c-4.1,15.5-4.4,31.1-1,46.4   c-1.8,1.3-3.4,2.8-4.8,4.6c-6.9,9.1-7.2,23.4-1.1,45.1c4.2,15,9.8,30.3,19.3,37.2c2.8,14.4,7.5,27.5,13.8,39.1v24.1   c-17.2,8.7-66.3,34.7-114.5,72.2c-20.7,16.1-33.1,41.5-33.1,68.1v26c0,18.8,15.3,34,34,34h398.5   C462.4,488.9,477.7,473.6,477.7,454.8z M35.6,454.8v-26c0-19,8.8-37.2,23.6-48.7c52-40.3,104.9-66.9,115-71.8   c5.6-2.7,9.1-8.3,9.1-14.6v-32.5c0-2.2-0.6-4.3-1.7-6.2c-6.6-11.2-11.2-24.6-13.5-39.9c-0.8-4.9-4.4-8.8-9.1-10   c-1.3-1.5-5-6.9-9.7-23.6c-3.9-13.8-3.6-20.2-3.2-22.5c3.9,0.2,7.8-1.6,10.3-4.7c2.6-3.3,3.3-7.7,1.9-11.6   c-5.2-14.5-5.8-29.4-1.8-44.6c3.4-14.6,11.2-28.2,23.3-40.6c6.5-7,14-13.1,22-18.2c0.1-0.1,0.3-0.2,0.4-0.3   c6.7-4.7,13.7-8.2,20.6-10.6c0.1,0,0.2-0.1,0.2-0.1c5.9-2,12-3.1,18.4-3.4c17.5-1.5,33.2,1.8,47.1,9.9   c15.2,8.4,21.4,19.4,21.4,19.4c1.9,3.9,5.3,6.2,9.7,6.5c0.3,0,6.8,1,12.4,8.9c5.9,8.4,14.3,30,3.8,80.4c-1.2,5.6,1.7,11.2,6.8,13.6   c0.5,1.8,1.3,7.9-3,23.1c-3.8,13.4-6.9,19.5-8.7,22.2c-2.3-0.4-4.7-0.2-6.9,0.8c-3.8,1.6-6.6,5.1-7.3,9.1c-2.1,12-5.5,22.8-9.9,32   c-0.8,1.7-1.2,3.5-1.2,5.3v37.6c0,6.3,3.5,11.8,9.1,14.6c10.1,4.9,63,31.6,114.9,71.8c14.8,11.5,23.6,29.7,23.6,48.7v26   c0,5.2-4.3,9.5-9.5,9.5H45.2C39.9,464.4,35.6,460.1,35.6,454.8z"
+                      ></path>
+                    </g>
+                  </svg>
+                </a>
+                <div class="header-box">
+                  <div class="header-user">
+                    <div class="user">
+                      <h2 class="user-title">Đăng nhập tài khoản</h2>
+                      <p class="user-enter">Nhập email và mật khẩu của bạn:</p>
+                      <div class="user-content">
+                        <input
+                          type="text"
+                          class="user-btn email"
+                          placeholder="Email"
+                          id="email"
+                        />
+                        <input
+                          type="password"
+                          class="user-btn password"
+                          placeholder="Mật khẩu"
+                          id="password"
+                        />
+                      </div>
+                      <p class="user-recaptcha">
+                        Trang web này được bảo vệ bởi reCAPTCHA và Google
+                        <a href="#!">Chính sách bảo mật</a> và
+                        <a href="#!">Điều khoản dịch vụ</a> được áp dụng.
+                      </p>
+                      <button class="user-submit">
+                        <a href="#!">Đăng nhập</a>
+                      </button>
+                      <span
+                        >Khách hàng mới?
+                        <a href="register.html">Tạo tài khoản</a></span
+                      >
+                      <span
+                        >Quên mật khẩu?
+                        <a href="#!">Khôi phục mật khẩu</a></span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div id="header-icon">
+                <a href="#!" id="headerIcons" onclick="overflowY()">
+                  <svg
+                    class="svg-cart"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 -13 456.75885 456"
+                  >
+                    <path
+                      d="m150.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"
+                    ></path>
+                    <path
+                      d="m446.855469 94.035156h-353.101563l-7.199218-40.300781c-4.4375-24.808594-23.882813-44.214844-48.699219-48.601563l-26.101563-4.597656c-5.441406-.96875-10.632812 2.660156-11.601562 8.097656-.964844 5.441407 2.660156 10.632813 8.101562 11.601563l26.199219 4.597656c16.53125 2.929688 29.472656 15.871094 32.402344 32.402344l35.398437 199.699219c4.179688 23.894531 24.941406 41.324218 49.199219 41.300781h210c22.0625.066406 41.546875-14.375 47.902344-35.5l47-155.800781c.871093-3.039063.320312-6.3125-1.5-8.898438-1.902344-2.503906-4.859375-3.980468-8-4zm-56.601563 162.796875c-3.773437 12.6875-15.464844 21.367188-28.699218 21.300781h-210c-14.566407.039063-27.035157-10.441406-29.5-24.800781l-24.699219-139.398437h336.097656zm0 0"
+                    ></path>
+                    <path
+                      d="m360.355469 322.332031c-30.046875 0-54.402344 24.355469-54.402344 54.402344 0 30.042969 24.355469 54.398437 54.402344 54.398437 30.042969 0 54.398437-24.355468 54.398437-54.398437-.03125-30.03125-24.367187-54.371094-54.398437-54.402344zm0 88.800781c-19 0-34.402344-15.402343-34.402344-34.398437 0-19 15.402344-34.402344 34.402344-34.402344 18.996093 0 34.398437 15.402344 34.398437 34.402344 0 18.996094-15.402344 34.398437-34.398437 34.398437zm0 0"
+                    ></path>
+                  </svg>
+                </a>
+                <div class="header-box">
+                  <div class="header-cart">
+                    <div class="cart">
+                      <p class="cart-title">Giỏ hàng</p>
+                      <div class="cart-product">
+                        <svg width="81" height="70" viewBox="0 0 81 70">
+                          <g
+                            transform="translate(0 2)"
+                            stroke-width="4"
+                            stroke="#90cdde"
+                            fill="none"
+                            fill-rule="evenodd"
+                          >
+                            <circle
+                              stroke-linecap="square"
+                              cx="34"
+                              cy="60"
+                              r="6"
+                            ></circle>
+                            <circle
+                              stroke-linecap="square"
+                              cx="67"
+                              cy="60"
+                              r="6"
+                            ></circle>
+                            <path
+                              d="M22.9360352 15h54.8070373l-4.3391876 30H30.3387146L19.6676025 0H.99560547"
+                            ></path>
+                          </g>
+                        </svg>
+                        <p>Hiện có 2 sản phẩm trong giỏ hàng</p>
+                      </div>
+                      <div class="cart-price">
+                        <span>Tổng tiền:</span>
+                        <p>0đ</p>
+                      </div>
+                      <div class="cart-btn">
+                        <button><a href="carts.html">Xem giỏ hàng</a></button>
+                        <button><a href="pay.html">Thanh toán</a></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-container">
+          <ul class="navbar-list">
+            <li class="navbar-items">
+              <a href="index.html" class="navbar-links navbar-active"
+                >Trang chủ</a
+              >
+            </li>
+            <li class="navbar-items">
+              <a href="collect.html" class="navbar-links"
+                >Bộ sưu tập <i class="bx bx-chevron-down"></i>
+              </a>
+              <ul class="submenu">
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Nhẫn</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Hoa tai</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Dây chuyền</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Vòng tay</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Phụ kiện</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-items">
+              <a href="detail.html" class="navbar-links"
+                >Sản phẩm <i class="bx bx-chevron-down"></i>
+              </a>
+              <ul class="submenu">
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Khuyến mãi</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Yêu thích nhất</a>
+                </li>
+                <li class="submenu-items">
+                  <a href="#!" class="submenu-links">Mua nhiều nhất</a>
+                </li>
+              </ul>
+            </li>
+            <li class="navbar-items">
+              <a href="blog.html" class="navbar-links">Blog</a>
+            </li>
+            <li class="navbar-items">
+              <a href="review.html" class="navbar-links">Giới thiệu</a>
+            </li>
+            <li class="navbar-items">
+              <a href="contacts.html" class="navbar-links">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- search -->
+    <section class="search">
+      <div class="search-box">
+        <input type="text" placeholder="Tìm kiếm sản phẩm ..." />
+        <i class="bx bx-search"></i>
+      </div>
+    </section>
+
+    <!-- slider -->
+    <section class="swiper slider">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="./assets/image/banner1.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="./assets/image/banner2.jpg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </section>
+
+    <!-- banner -->
+    <section class="banner">
+      <div class="banner-container">
+        <div class="banner-box">
+          <a href="collect.html"><img src="./assets/image/bn1.jpg" alt="" /></a>
+          <div class="button">
+            <h2 class="button-title">D'ORO</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box">
+          <a href="collect.html"><img src="./assets/image/bn2.jpg" alt="" /></a>
+          <div class="button">
+            <h2 class="button-title">Pave Classica</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box">
+          <a href="collect.html"><img src="./assets/image/bn3.jpg" alt="" /></a>
+          <div class="button">
+            <h2 class="button-title">Trio</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box">
+          <a href="collect.html"><img src="./assets/image/bn4.jpg" alt="" /></a>
+          <div class="button">
+            <h2 class="button-title">Pave Rose</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box">
+          <img src="./assets/image/bn5.jpg" alt="" />
+          <div class="button">
+            <h2 class="button-title">Bouquet</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="banner-box">
+          <img src="./assets/image/bn6.jpg" alt="" />
+          <div class="button">
+            <h2 class="button-title">Duo</h2>
+            <div class="button-box">
+              <span class="button-text">Mua ngay</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- heading -->
+    <section class="heading">
+      <h2 class="heading-text"><a href="#!">Sản phẩm mới</a></h2>
+    </section>
+
+    <!-- product -->
+    <section class="product">
+      <div class="container">
+        <div class="product-layout">
+          <div class="swiper mySwiperProducts">
+            <div class="swiper-wrapper">
+              <div class="product-items swiper-slide">
+                <div class="product-img">
+                  <img src="./assets/image/product1.jpg" alt="" />
+                </div>
+                <div class="product-box">
+                  <a href="detail.html" class="product-name"
+                    >Yellow Gold Multi Sapphire</a
+                  >
+                  <div class="product-price">
+                    <span>1.990.000đ</span>
+                    <span>2.590.000đ</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="product-star">
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                    </div>
+                    <span class="product-buy">Đã bán 2,7k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-items swiper-slide">
+                <div class="product-img">
+                  <img src="./assets/image/product3.jpg" alt="" />
+                </div>
+                <div class="product-box">
+                  <a href="detail.html" class="product-name"
+                    >White Gold Diamond Solitaire Ring</a
+                  >
+                  <div class="product-price">
+                    <span>5.990.000đ</span>
+                    <span>7.890.000đ</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="product-star">
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                    </div>
+                    <span class="product-buy">Đã bán 4,1k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-items swiper-slide">
+                <div class="product-img">
+                  <img src="./assets/image/product4.jpg" alt="" />
+                </div>
+                <div class="product-box">
+                  <a href="detail.html" class="product-name"
+                    >Sapphire Diamond Ring</a
+                  >
+                  <div class="product-price">
+                    <span>2.190.000đ</span>
+                    <span>3.590.000đ</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="product-star">
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                    </div>
+                    <span class="product-buy">Đã bán 1,1k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-items swiper-slide">
+                <div class="product-img">
+                  <img src="./assets/image/product5.jpg" alt="" />
+                </div>
+                <div class="product-box">
+                  <a href="detail.html" class="product-name"
+                    >Diamond Wide Band Bracelet</a
+                  >
+                  <div class="product-price">
+                    <span>3.590.000đ</span>
+                    <span>3.990.000đ</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="product-star">
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                    </div>
+                    <span class="product-buy">Đã bán 2,2k</span>
+                  </div>
+                </div>
+              </div>
+              <div class="product-items swiper-slide">
+                <div class="product-img">
+                  <img src="./assets/image/product6.jpg" alt="" />
+                </div>
+                <div class="product-box">
+                  <a href="detail.html" class="product-name">Diamond Ring</a>
+                  <div class="product-price">
+                    <span>6.250.000đ</span>
+                    <span>7.250.000đ</span>
+                  </div>
+                  <div class="product-rate">
+                    <div class="product-star">
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                      <i class="bx bxs-star"></i>
+                    </div>
+                    <span class="product-buy">Đã bán 3,1k</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- category -->
+    <section class="category">
+      <div class="category-container">
+        <div class="category-box">
+          <a href="collect.html"
+            ><img src="./assets/image/category1.jpg" alt=""
+          /></a>
+          <div class="button">
+            <h2 class="button-title">Đại sứ thương hiệu</h2>
+            <div class="button-box">
+              <span class="button-text">Họ là ai</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="category-box">
+          <a href="collect.html"
+            ><img src="./assets/image/category2.jpg" alt=""
+          /></a>
+          <div class="button">
+            <h2 class="button-title">Thương hiệu</h2>
+            <div class="button-box">
+              <span class="button-text">Tìm hiểu thêm</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+        <div class="category-box">
+          <a href="collect.html"
+            ><img src="./assets/image/category3.jpg" alt=""
+          /></a>
+          <div class="button">
+            <h2 class="button-title">Blog</h2>
+            <div class="button-box">
+              <span class="button-text">Xem những bài viết</span>
+              <i class="bx bx-right-arrow-alt"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- heading -->
+    <section class="heading">
+      <h2 class="heading-text"><a href="#!">Sản phẩm bán chạy</a></h2>
+    </section>
+
+    <!-- product -->
+    <section class="product">
+      <div class="container">
+        <div class="product-container">
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp1.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Diamond Butterfly Earrings</a
+              >
+              <div class="product-price">
+                <span>760.000đ</span>
+                <span>1.590.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 2,2k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp2.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Diamond Huggie Hoop Earrings</a
+              >
+              <div class="product-price">
+                <span>980.000đ</span>
+                <span>1.250.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 0,8k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp3.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Rose Gold Amethyst, Iolite and Diamond Earrings</a
+              >
+              <div class="product-price">
+                <span>700.000đ</span>
+                <span>990.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 1,2k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp4.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Rose Gold Ruby and Diamond Drop Earrings</a
+              >
+              <div class="product-price">
+                <span>1.400.000đ</span>
+                <span>1.699.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 1,1k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp5.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Rose Gold Tanzanite and Diamond Earrings</a
+              >
+              <div class="product-price">
+                <span>800.000đ</span>
+                <span>990.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 4,1k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp6.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Tri Color Gold Diamond Drop Earrings</a
+              >
+              <div class="product-price">
+                <span>890.000đ</span>
+                <span>1.190.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 1,4k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp7.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >White Gold Blue Sapphire Earrings</a
+              >
+              <div class="product-price">
+                <span>1.450.000đ</span>
+                <span>1.600.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 1,9k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp8.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >White Gold Sapphire & Diamond Hoop Earrings</a
+              >
+              <div class="product-price">
+                <span>1.100.000đ</span>
+                <span>1.390.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 0,9k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp9.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Yellow Gold Pink Sapphire Huggie Hoops Earrings</a
+              >
+              <div class="product-price">
+                <span>1.400.000đ</span>
+                <span>1.590.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 1,6k</span>
+              </div>
+            </div>
+          </div>
+          <!-- product items -->
+          <div class="product-items">
+            <div class="product-img">
+              <img src="./assets/image/sp10.jpg" alt="" />
+            </div>
+            <div class="product-box">
+              <a href="detail.html" class="product-name"
+                >Sapphire Huggie Hoops Earrings</a
+              >
+              <div class="product-price">
+                <span>990.000đ</span>
+                <span>1.199.000đ</span>
+              </div>
+              <div class="product-rate">
+                <div class="product-star">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="product-buy">Đã bán 3,1k</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- heading -->
+    <section class="heading">
+      <h2 class="heading-text"><a href="#!">Bài viết mới nhất</a></h2>
+    </section>
+
+    <!-- posts -->
+    <section class="posts">
+      <div class="posts-container">
+        <div class="posts-box">
+          <img src="./assets/image/posts1.jpg" alt="" />
+          <span class="posts-date">Thứ hai, 15/10/2022</span>
+          <a href="status.html" class="posts-title"
+            >Sức hút của vàng hồng của ngành trang sức</a
+          >
+          <p class="posts-text">
+            Vàng hồng là một trong những nguyên liệu chế tác trang sức được các
+            quý cô ưa chuộng nhất hiện nay.Vàng hồng từ lâu đã quen thuộc và trở
+            thành...
+          </p>
+        </div>
+        <div class="posts-box">
+          <img src="./assets/image/posts2.jpg" alt="" />
+          <span class="posts-date">Thứ năm, 02/9/2021</span>
+          <a href="status.html" class="posts-title"
+            >Kiểu cắt Round - Bí mật của tuyệt tác kim cương</a
+          >
+          <p class="posts-text">
+            Nếu đã trót say mê vẻ đẹp lấp lánh của kim cương chắc hẳn các bạn sẽ
+            không còn xa lạ với kiểu cắt Round nổi tiếng. Nhưng bạn đã...
+          </p>
+        </div>
+        <div class="posts-box">
+          <img src="./assets/image/posts3.jpg" alt="" />
+          <span class="posts-date">Chủ nhật, 23/07/2022</span>
+          <a href="status.html" class="posts-title"
+            >Những biểu tượng nhan sắc gắn liền với nghệ thuật</a
+          >
+          <p class="posts-text">
+            Trang sức kim cương được sinh ra đời để giúp phụ nữ trở nên rạng rỡ
+            và nổi bật hơn. Tuy nhiên, việc tỏa sáng và nổi bật như thế...
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- information -->
+    <section class="information">
+      <div class="information-container">
+        <div class="information-img">
+          <img src="./assets/image/information.jpg" alt="" />
+          <div class="information-btn">
+            <h2 class="information-title">Về chúng tôi</h2>
+            <button class="information-button">
+              <a href="#!">Xem ngay</a>
+            </button>
+          </div>
+        </div>
+        <div class="information-content">
+          <p>
+            Trang giới thiệu giúp khách hàng hiểu rõ hơn về cửa hàng của bạn.
+            Hãy cung cấp thông tin cụ thể về việc kinh doanh, về cửa hàng, thông
+            tin liên hệ. Điều này sẽ giúp khách hàng cảm thấy tin tưởng khi mua
+            hàng trên website của bạn.
+          </p>
+          <p>Một vài gợi ý cho nội dung trang Giới thiệu:</p>
+          <div>
+            <ul>
+              <li><span>Bạn là ai</span></li>
+              <li><span>Giá trị kinh doanh của bạn là gì</span></li>
+              <li><span>Địa chỉ cửa hàng</span></li>
+              <li>
+                <span>Bạn đã kinh doanh trong ngành hàng này bao lâu rồi</span>
+              </li>
+              <li>
+                <span>Bạn kinh doanh ngành hàng online được bao lâu</span>
+              </li>
+              <li><span>Đội ngũ của bạn gồm những ai</span></li>
+              <li><span>Thông tin liên hệ</span></li>
+              <li>
+                <span
+                  >Liên kết đến các trang mạng xã hội (Twitter, Facebook)</span
+                >
+              </li>
+            </ul>
+          </div>
+          <p>
+            Bạn có thể chỉnh sửa hoặc xoá bài viết này tại
+            <a href="#!"><strong>đây</strong></a> hoặc thêm những bài viết mới
+            trong phần quản lý <a href="#!"><strong>Trang nội dung</strong></a
+            >.
+          </p>
+        </div>
+      </div>
+      <div class="information-image">
+        <div class="information-boxImage">
+          <img src="./assets/image/im1.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im2.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im3.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im4.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im5.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im6.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im7.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im8.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im9.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im10.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im11.jpg" alt="" />
+        </div>
+        <div class="information-boxImage">
+          <img src="./assets/image/im12.jpg" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- search -->
+    <section class="searchh">
+      <div class="container">
+        <div class="searchh-container">
+          <p class="searchh-text">
+            Nhận thông tin khuyến mãi mới nhất từ Candy Store
+          </p>
+          <div class="searchh-form">
+            <input
+              type="text"
+              class="searchh-btn"
+              placeholder="Địa chỉ email"
+            />
+            <button class="searchh-register"><span>Đăng ký</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container">
+          <div class="footer-smart">
+            <div class="footer-logo">
+              <ion-icon name="layers-outline"></ion-icon>
+              <h2>Candy</h2>
+            </div>
+            <p class="footer-text">
+              Candy Store là một trong những công ty chuyên cung cấp các mặt
+              hàng trang sức đẹp uy tín hàng đầu trên cả nước. Với những sản
+              phẩm chất lượng được làm từ nguyên liệu vàng, bạc, đá quý cao cấp,
+              cùng với mẫu mã đa dạng, thương hiệu.
+            </p>
+            <div class="footer-icons">
+              <div class="footer-icon"><i class="bx bxl-facebook"></i></div>
+              <div class="footer-icon"><i class="bx bxl-twitter"></i></div>
+              <div class="footer-icon"><i class="bx bxl-youtube"></i></div>
+              <div class="footer-icon"><i class="bx bxl-instagram"></i></div>
+            </div>
+          </div>
+          <div class="footer-about footer-box">
+            <h3 class="footer-title">Pháp lý câu hỏi</h3>
+            <ul class="footer-list">
+              <li class="footer-items">
+                <a href="#!" class="footer-links">Tìm kiếm</a>
+              </li>
+              <li class="footer-items">
+                <a href="review.html" class="footer-links">Giới thiệu</a>
+              </li>
+              <li class="footer-items">
+                <a href="review.html" class="footer-links"
+                  >Chính sách đổi trả</a
+                >
+              </li>
+              <li class="footer-items">
+                <a href="review.html" class="footer-links"
+                  >Chính sách bảo mật</a
+                >
+              </li>
+              <li class="footer-items">
+                <a href="review.html" class="footer-links"
+                  >Điều khoản dịch vụ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-support footer-box">
+            <h3 class="footer-title">Danh mục</h3>
+            <ul class="footer-list">
+              <li class="footer-items">
+                <a href="index.html" class="footer-links">Trang chủ</a>
+              </li>
+              <li class="footer-items">
+                <a href="collect.html" class="footer-links">Bộ sưu tập</a>
+              </li>
+              <li class="footer-items">
+                <a href="detail.html" class="footer-links">Sản phẩm</a>
+              </li>
+              <li class="footer-items">
+                <a href="blog.html" class="footer-links">Blog</a>
+              </li>
+              <li class="footer-items">
+                <a href="review.html" class="footer-links">Giới thiệu</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-info footer-box">
+            <h3 class="footer-title">Liên hệ với chúng tôi</h3>
+            <ul class="footer-list">
+              <li class="footer-items">
+                <a href="#!" class="footer-links">
+                  Địa chỉ: 17/06 Quế Châu, Quế Sơn, Quảng Nam.
+                </a>
+              </li>
+              <li class="footer-items">
+                <a href="#!" class="footer-links">
+                  Email: canfullstack@fpt.edu.vn
+                </a>
+              </li>
+              <li class="footer-items">
+                <a href="#!" class="footer-links"> Điện thoại: 0373 405 375 </a>
+              </li>
+              <li class="footer-items">
+                <a href="#!" class="footer-links"> Zalo: Kan Kan </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- license -->
+    <section class="footer-license">
+      <span>© Bản quyền thuộc về Can_FrontBack | Vui lòng không copy nhé!</span>
+    </section>
+
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/swiper.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

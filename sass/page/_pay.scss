@@ -1,0 +1,287 @@
+.pay {
+  background-image: linear-gradient(to right, transparent 50%, rgb(252, 252, 252) 50%);
+
+  &-container {
+    display: grid;
+    grid-template-columns: 50% 1fr;
+  }
+
+  &-info,
+  &-content {
+    padding: 50px;
+  }
+
+  &-namestore {
+    font-size: 2.5rem;
+  }
+
+  &-path {
+    display: flex;
+    gap: 5px;
+    margin: 8px 0 12px 0;
+
+    p {
+      font-size: 1.2rem;
+      color: $textDark;
+    }
+
+    a {
+      color: $blue;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    i {
+      font-size: 1.8rem;
+      color: $textLight;
+    }
+  }
+
+  &-title {
+    font-size: 1.85rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+
+  &-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    margin-bottom: 25px;
+
+    input {
+      border: $border;
+      padding: 11px 0;
+      text-indent: 10px;
+      margin-bottom: 10px;
+      @include borderRadius(4px);
+
+      &:focus {
+        border-color: $primary;
+      }
+
+      &:first-child,
+      &:nth-child(4) {
+        grid-column: 4 span;
+      }
+
+      &:nth-child(2) {
+        grid-column: 3 span;
+      }
+
+      &:nth-child(3) {
+        grid-column: 1 span;
+      }
+
+      &:nth-child(5),
+      &:nth-child(6) {
+        grid-column: 2 span;
+      }
+    }
+  }
+
+  &-bottom {
+    @include flex-spaceBetween;
+
+    button {
+      padding: 12.4px;
+      @include borderRadius(3px);
+      @extend .btn;
+
+      &::before {
+        @extend .BtnBefore;
+      }
+
+      &:hover::before {
+        @extend .hoverBtnBefore;
+      }
+    }
+
+    a {
+      font-size: 1.42rem;
+    }
+  }
+
+  &-cart {
+    color: $blue;
+    font-weight: 500;
+
+    &:hover {
+      filter: brightness(1.2);
+      -webkit-filter: brightness(1.2);
+    }
+  }
+
+  &-product {
+    @include flex-spaceBetween;
+    padding-bottom: 15px;
+
+    &:nth-child(2) {
+      border-bottom: $borderBottom;
+    }
+  }
+
+  &-img {
+    width: 60px;
+    border: $border;
+    padding: 10px;
+    @include borderRadius(4px);
+  }
+
+  &-box {
+    @include flex-align;
+    gap: 10px;
+  }
+
+  &-name {
+    font-weight: 500;
+
+    p {
+      font-size: 1.2rem;
+      color: $textLight;
+      font-weight: 400;
+    }
+  }
+
+  &-code {
+    display: flex;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: $borderBottom;
+
+    input {
+      width: 75%;
+      padding: 11px;
+      border: $border;
+      @include borderRadius(3px);
+    }
+
+    button {
+      flex-grow: 1;
+      @include borderRadius(3px);
+      @extend .btn;
+
+      &::before {
+        @extend .BtnBefore;
+      }
+
+      &:hover::before {
+        @extend .hoverBtnBefore;
+      }
+    }
+  }
+
+  &-ship {
+    padding: 18px 0;
+    border-bottom: $borderBottom
+  }
+
+  &-shipbox,
+  &-sum {
+    font-size: 1.3rem;
+    color: $text;
+    @include flex-spaceBetween;
+
+    &:first-child {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.4rem;
+      color: $textDark;
+    }
+  }
+
+  &-sum {
+    margin-top: 40px;
+
+    span {
+      font-size: 1.65rem;
+      color: $textDark;
+    }
+
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $blue;
+    }
+  }
+
+  @include lg {
+    &-container {
+      grid-template-columns: 100%;
+      background-image: linear-gradient(to right, transparent, white);
+    }
+
+    &-namestore,
+    &-path {
+      display: none;
+    }
+
+    &-content {
+      order: 1;
+    }
+
+    &-info {
+      order: 2;
+    }
+
+    &-info,
+    &-content {
+      padding: 40px 0;
+    }
+  }
+
+  &-sum {
+
+    span {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  }
+
+  @include md {
+    &-form {
+      grid-gap: 2px;
+
+      input {
+        grid-column: 4 span !important;
+      }
+    }
+  }
+
+  @include sm {
+    &-path {
+      gap: 0;
+    }
+
+    &-sum {
+      span {
+        font-size: 1.4rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-bottom {
+      flex-direction: column;
+      gap: 10px;
+
+      a {
+        order: 1;
+      }
+
+      button {
+        width: 100%;
+        order: 2;
+      }
+    }
+  }
+}
